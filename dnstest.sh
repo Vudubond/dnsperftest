@@ -8,22 +8,22 @@ command -v bc > /dev/null || { echo "error: bc was not found. Please install bc.
 NAMESERVERS=`cat /etc/resolv.conf | grep ^nameserver | cut -d " " -f 2 | sed 's/\(.*\)/&#&/'`
 
 PROVIDERSV4="
-1.1.1.1#cloudflare 
-4.2.2.1#level3 
-8.8.8.8#google 
-9.9.9.9#quad9 
-80.80.80.80#freenom 
-208.67.222.123#opendns 
-199.85.126.20#norton 
-185.228.168.168#cleanbrowsing 
-77.88.8.7#yandex 
-176.103.130.132#adguard 
-156.154.70.3#neustar 
-8.26.56.26#comodo
-45.90.28.202#nextdns
-85.9.32.234#GTS
-85.9.52.226#GTS
-127.0.0.1#LOCALHOST
+1.1.1.1#cloudflare-1.1.1.1
+4.2.2.1#level3-4.2.2.1
+8.8.8.8#google-8.8.8.8
+9.9.9.9#quad9-9.9.9.9
+80.80.80.80#freenom-80.80.80.80
+208.67.222.123#opendns-208.67.222.123 
+199.85.126.20#norton-199.85.126.20
+185.228.168.168#cleanbrowsing-185.228.168.168
+77.88.8.7#yandex-77.88.8.7
+176.103.130.132#adguard-176.103.130.132
+156.154.70.3#neustar-156.154.70.3
+8.26.56.26#comodo-8.26.56.26
+45.90.28.202#nextdns-45.90.28.202
+85.9.32.234#GTS-85.9.32.234
+85.9.52.226#GTS-85.9.52.226
+127.0.0.1#LOCALHOST-127.0.0.1
 "
 
 PROVIDERSV6="
