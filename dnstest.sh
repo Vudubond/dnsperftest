@@ -71,7 +71,7 @@ DOMAINS2TEST="www.google.com amazon.com facebook.com www.youtube.com www.reddit.
 
 
 totaldomains=0
-printf "%-21s" ""
+printf "%-30s" ""
 for d in $DOMAINS2TEST; do
     totaldomains=$((totaldomains + 1))
     printf "%-8s" "test$totaldomains"
@@ -85,7 +85,7 @@ for p in $NAMESERVERS $providerstotest; do
     pname=${p##*#}
     ftime=0
 
-    printf "%-21s" "$pname"
+    printf "%-30s" "$pname"
     for d in $DOMAINS2TEST; do
         ttime=`$dig +tries=1 +time=2 +stats @$pip $d |grep "Query time:" | cut -d : -f 2- | cut -d " " -f 2`
         if [ -z "$ttime" ]; then
